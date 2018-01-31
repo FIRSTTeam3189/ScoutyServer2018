@@ -10,7 +10,7 @@ namespace Vue2Spa.Controllers
 {
     public class RoboContext : IdentityDbContext<User>
     {
-        public DbSet<User> Users { get; set;}
+        public DbSet<User> Userses { get; set;}
         public DbSet<Robot> Robots { get; set; }
         public DbSet<RobotEvent> RobotEvents { get; set; }
         public DbSet<RobotMatch> RobotMatch { get; set; }

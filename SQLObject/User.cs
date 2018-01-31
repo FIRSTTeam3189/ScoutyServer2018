@@ -10,7 +10,9 @@ namespace Vue2Spa.SQLObject
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        //How many matches have been scouted
         public short Koolness { get; set; }
         public short Matches { get; set; }
+        public short Teamnumber { get; set; }
     }
 }

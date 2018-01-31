@@ -35,13 +35,13 @@ namespace Vue2Spa.SQLObject
     {
         [Key]
         public short TeamNumber { get; set; }
-        public IList<RobotMatch> Matches { get; set }
+        public IList<RobotMatch> Matches { get; set; }
         public string Drivetrain { get; set; }
         public string BoxIntake { get; set; }
         public short ClimbSpeed { get; set; }
         public CoOpClimb CoOpClimb { get; set; }
         public string Auto { get; set; }
-        public string strategy { get; set; }
+        public string Strategy { get; set; }
         public Scoring_Types Scoring_Types { get; set; }
         public DriverXP DriverXP { get; set; }
         public User Scouter { get; set; }
