@@ -1,7 +1,7 @@
 @{ ViewData["Title"] = "Home Page"; }
 
-<div id="app"></div>
+<div id="q-app"></div>
 
 @section scripts {
-    <script src="~/dist/main.js" asp-append-version="true"></script>
+  <script asp-src-include="~/dist/js/**/*.js" asp-src-exclude="~/dist/js/vendor.js"></script>
 }
