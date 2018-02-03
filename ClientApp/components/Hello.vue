@@ -13,8 +13,8 @@
       </q-btn>
 
       <q-toolbar-title>
-        Quasar App
-        <div slot="subtitle">Running on Quasar v{{$q.version}}</div>
+        Scouty Server 2018
+        <div slot="subtitle">Running on Crack Cocaine - Meth's dirty cousin</div>
       </q-toolbar-title>
     </q-toolbar>
 
