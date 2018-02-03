@@ -12,12 +12,14 @@ require(`./themes/app.${__THEME}.styl`)
 // require(`quasar/dist/quasar.ie.${__THEME}.css`)
 
 import Vue from 'vue'
+import Vuex from 'vuex'
 import Quasar from 'quasar'
 import router from './router'
 import axios from 'axios'
 
 Vue.config.productionTip = false
 Vue.prototype.$http = axios
+Vue.use(Vuex)
 Vue.use(Quasar) // Install Quasar Framework
 
 if (__THEME === 'mat') {
