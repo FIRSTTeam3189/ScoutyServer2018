@@ -17,10 +17,10 @@
       </q-toolbar>
 
       <q-tabs ref="tabs" slot="navigation">
-        <q-route-tab default="true" slot="title" name="teamsTab" icon="contacts" to="/teams" replace />
+        <q-route-tab default slot="title" name="teamsTab" icon="contacts" to="/teams" replace />
         <q-route-tab slot="title" name="eventsTab" icon="place" to="/events" replace />
       </q-tabs>
-
+      
       <router-view />
     </q-layout>
   </div>

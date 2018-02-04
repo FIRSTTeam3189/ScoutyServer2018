@@ -22,6 +22,7 @@ export default {
     QRouteTab
   },
   mounted() {
+    this.$router.replace('teams')
     console.log('Did the thing')
   }
 }
