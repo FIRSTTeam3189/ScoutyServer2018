@@ -6,7 +6,9 @@ import {
   QCard,
   QCardTitle,
   QCardSeparator,
-  QDataTable
+  QDataTable,
+  QCardActions,
+  QBtn
 } from 'quasar'
 
 const teamsConfig = {
@@ -47,18 +49,22 @@ const teamsColumns = [
 
 export default {
   // 2. Tell vuejs you're using these components
+  // It's THICC
   components: {
     QCardMain,
     QCard,
     QCardTitle,
     QCardSeparator,
-    QDataTable
+    QDataTable,
+    QCardActions,
+    QBtn
   },
   data() {
     return {
       teams: [],
       teamsTableConfig: teamsConfig,
-      teamsTableColumns: teamsColumns
+      teamsTableColumns: teamsColumns,
+      page: 0
     }
   },
   methods: {

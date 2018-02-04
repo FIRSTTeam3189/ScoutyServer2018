@@ -25,6 +25,13 @@
           </template>
         </q-data-table>
       </q-card-main>
+      <q-card-separator />
+      <q-card-actions align="end">
+        <q-btn color="secondary" name="Load" @click="loadTeams(++page)" big style="width: 200px;">
+          Load
+          
+        </q-btn>
+      </q-card-actions>
     </q-card>
   </div>
 </template>
