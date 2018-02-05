@@ -23,7 +23,7 @@ const teamsConfig = {
 const teamsColumns = [
   {
     label: 'Team Number',
-    field: '_teamNumber',
+    field: 'teamNumber',
     width: '70px',
     sort: true,
     filter: true,
@@ -31,7 +31,7 @@ const teamsColumns = [
   },
   {
     label: 'Team Name',
-    field: '_nickname',
+    field: 'nickname',
     width: '200px',
     sort: true,
     filter: true,
@@ -39,7 +39,7 @@ const teamsColumns = [
   },
   {
     label: 'Rookie Year',
-    field: '_rookieYear',
+    field: 'rookieYear',
     width: '70px',
     sort: true,
     filter: true,

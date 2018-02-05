@@ -6,7 +6,8 @@ import {
   QIcon,
   QTabs,
   QTab,
-  QRouteTab
+  QRouteTab,
+  QCard
 } from 'quasar'
 
 export default {
@@ -19,7 +20,8 @@ export default {
     QIcon,
     QTabs,
     QTab,
-    QRouteTab
+    QRouteTab,
+    QCard
   },
   mounted() {
     this.$router.replace('teams')

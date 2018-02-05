@@ -6,14 +6,15 @@ export class ScoutyTeam {
    * @param {any} baTeamJson
    */
   constructor (baTeamJson) {
-    this._teamNumber = baTeamJson.team_number
-    this._key = baTeamJson.key
-    this._name = baTeamJson.name
-    this._website = baTeamJson.website
-    this._rookieYear = baTeamJson.rookie_year
-    this._nickname = !isStrEmpty(baTeamJson.nickname) ? baTeamJson.nickname : baTeamJson.name
+    this.teamNumber = baTeamJson.team_number
+    this.key = baTeamJson.key
+    this.name = baTeamJson.name
+    this.website = baTeamJson.website
+    this.rookieYear = baTeamJson.rookie_year
+    this.nickname = !isStrEmpty(baTeamJson.nickname) ? baTeamJson.nickname : baTeamJson.name
   }
 
+  /*
   // Gets the team number of the current team - such as 3189
   get number () {
     return this._teamNumber
@@ -43,6 +44,7 @@ export class ScoutyTeam {
   get nickname () {
     return this._nickname
   }
+  */
 }
 
 export class ScoutyEvent {
@@ -52,20 +54,20 @@ export class ScoutyEvent {
    * @param {any} baTeamJson
    */
   constructer (baEventJson) {
-    this._key = baEventJson.key
-    this._name = baEventJson.name
-    this._eventCode = baEventJson.event_code
-    this._eventType = baEventJson.event_type
-    this._startDate = baEventJson.start_date
-    this._endDate = baEventJson.end_date
-    this._year = baEventJson.year
-    this._city = baEventJson.city
-    this._state_prov = baEventJson.state_prov
-    this._country = baEventJson.country
-    this._eventTypeString = baEventJson.event_type_string
-    this._website = baEventJson.website
+    this.key = baEventJson.key
+    this.name = baEventJson.name
+    this.eventCode = baEventJson.event_code
+    this.eventType = baEventJson.event_type
+    this.startDate = baEventJson.start_date
+    this.endDate = baEventJson.end_date
+    this.year = baEventJson.year
+    this.city = isStrEmpty(baEventJson.city) ? '' : baEventJson.city
+    this.stateProv = isStrEmpty(baEventJson.stateProv) ? '' : baEventJson.state_prov
+    this.country = isStrEmpty(baEventJson.country) ? '' : baEventJson.country
+    this.eventTypeString = baEventJson.event_type_string
+    this.website = isStrEmpty(baEventJson.website) ? '' : baEventJson.website
   }
-
+  /*
   // Returns the event key
   get key () {
     return this._key
@@ -125,16 +127,18 @@ export class ScoutyEvent {
   get website () {
     return !isStrEmpty(this._website) ? this._website : ''
   }
+  */
 }
 
 export class ScoutyMatchAlliance {
   constructor (baMatchAllianceJson) {
-    this._score = baMatchAllianceJson.score
-    this._teamKeys = baMatchAllianceJson.team_keys
-    this._surrogateTeamKeys = baMatchAllianceJson.surrogate_team_keys
-    this._dqTeamKeys = baMatchAllianceJson.dq_team_keys
+    this.score = baMatchAllianceJson.score
+    this.teamKeys = baMatchAllianceJson.team_keys
+    this.surrogateTeamKeys = baMatchAllianceJson.surrogate_team_keys
+    this.dqTeamKeys = baMatchAllianceJson.dq_team_keys
   }
 
+  /*
   // Returns the score of the alliance. Null or -1 is an unplayed match.
   get score () {
     return this._score
@@ -154,6 +158,7 @@ export class ScoutyMatchAlliance {
   get dqTeamKeys () {
     return this._dqTeamKeys
   }
+  */
 }
 
 export class ScoutyMatch {
@@ -162,16 +167,17 @@ export class ScoutyMatch {
    * @param {any} baMatchJson
    */
   constructor (baMatchJson) {
-    this._key = baMatchJson._key
-    this._compLevel = baMatchJson._comp_level
-    this._setNumber = baMatchJson._set_number
-    this._matchNumber = baMatchJson._match_number
-    this._eventKey = baMatchJson._event_key
-    this._winningAlliance = baMatchJson._winning_alliance
-    this._redAlliance = new ScoutyMatchAlliance(baMatchJson._alliances['red'])
-    this._blueAlliance = new ScoutyMatchAlliance(baMatchJson._alliances['red'])
+    this.key = baMatchJson._key
+    this.compLevel = baMatchJson._comp_level
+    this.setNumber = baMatchJson._set_number
+    this.matchNumber = baMatchJson._match_number
+    this.eventKey = baMatchJson._event_key
+    this.winningAlliance = baMatchJson._winning_alliance
+    this.redAlliance = new ScoutyMatchAlliance(baMatchJson._alliances['red'])
+    this.blueAlliance = new ScoutyMatchAlliance(baMatchJson._alliances['red'])
   }
 
+  /*
   // returns the key
   get key () {
     return this._key
@@ -211,4 +217,5 @@ export class ScoutyMatch {
   get blueAlliance () {
     return this._blueAlliance
   }
+  */
 }

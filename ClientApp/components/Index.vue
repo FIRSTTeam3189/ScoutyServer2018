@@ -9,11 +9,14 @@
         <q-btn flat @click="$refs.layout.toggleLeft()">
           <q-icon name="menu" />
         </q-btn>
-
+        
         <q-toolbar-title>
           3189 Scouting App
           <span slot="subtitle">The dankest scouting site on the market</span>
         </q-toolbar-title>
+          <q-btn flat="">
+            <q-icon name="mail"  />
+          </q-btn>
       </q-toolbar>
 
       <q-tabs ref="tabs" slot="navigation">

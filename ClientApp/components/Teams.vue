@@ -12,15 +12,15 @@
           :columns="teamsTableColumns"
           @refresh="refreshTeams"
         >
-          <template slot="col-_teamNumber" scope="cell">
+          <template slot="col-teamNumber" slot-scope="cell">
             {{ cell.data }}
           </template>
 
-          <template slot="col-_nickname" scope="cell">
+          <template slot="col-nickname" slot-scope="cell">
             {{ cell.data }}
           </template>
 
-          <template slot="col-_rookieYear" scope="cell">
+          <template slot="col-rookieYear" slot-scope="cell">
             {{ cell.data }}
           </template>
         </q-data-table>
