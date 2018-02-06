@@ -42,6 +42,7 @@ namespace Vue2Spa.Controllers
             userManager.CreateAsync(NewUser, obj.Password).Wait();
             return new HttpResponseMessage(System.Net.HttpStatusCode.Accepted);
         }
+
         [Route("Login")]
         [ActionName("Login")]
         [AllowAnonymous]
@@ -71,6 +72,16 @@ namespace Vue2Spa.Controllers
             return BadRequest("Invalid Model");
 
         }
+        [Route("Logout")]
+        [ActionName("Logout")]
+        [Authorize]
+        [HttpPost]
+        public IActionResult Logout()
+        {
+          return SignOut();
+        }
         
-    }
-}
+      }
+  
+
+  }
