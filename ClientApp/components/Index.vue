@@ -19,6 +19,23 @@
           </q-btn>
       </q-toolbar>
 
+      <q-modal ref="eventsModal" :content-css="{minWidth: '80vw', minHeight: '80vh'}">
+        <q-modal-layout>
+          <q-toolbar slot="header">
+            <q-btn flat @click="$refs.eventsModal.close()">
+              <q-icon name="keyboard_arrow_left" />
+            </q-btn>
+            <div class="q-toolbar-title">
+              Select an Event
+            </div>
+          </q-toolbar>
+
+          <q-toolbar slot="header">
+            <q-search inverted v-model="eventSearch" color="none" />
+          </q-toolbar>
+        </q-modal-layout>
+      </q-modal>
+
       <q-tabs ref="tabs" slot="navigation">
         <q-route-tab default slot="title" name="teamsTab" icon="contacts" to="/teams" replace />
         <q-route-tab slot="title" name="eventsTab" icon="place" to="/events" replace />

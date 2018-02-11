@@ -9,6 +9,7 @@ import {
   QRouteTab,
   QCard
 } from 'quasar'
+import { mapGetters, mapActions } from 'vuex'
 
 export default {
   name: 'index',
@@ -23,8 +24,24 @@ export default {
     QRouteTab,
     QCard
   },
+  data() {
+    return {
+      eventSearch: ""
+    }
+  },
+  computed: {
+    ...mapGetters({
+      events: 'allEvents',
+      hasSelectedEvent: 'hasSelectedEvent'
+    })
+  },
+  methods: {
+    ...mapActions([
+      'syncEvents',
+      'selectEvent'
+    ])
+  },
   mounted() {
     this.$router.replace('teams')
-    console.log('Did the thing')
   }
 }
